@@ -1,0 +1,151 @@
+:root {
+    --btn-bg: #596d48;
+    --border: #e5e7eb;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, Arial, Sans-Serif;
+    background: #fff;
+    color: #000;
+    line-height: 1.5;
+    font-size: var(1rem + 0.5vw);
+    min-height: 100vh;
+
+    display: flex;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* MAIN STYLES */
+.column-1 {
+    background: url("./assets/images/form-left-bg.jpeg") no-repeat center/cover;
+    color: #fff;
+    width: 40%;
+    text-align: center;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 25vh;
+    padding: 8px;
+    font-family: norsebold;
+    font-size: calc(2.5rem + 1.5vw);
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .icon {
+    width: 60px;
+}
+
+.column-1 a {
+    text-decoration: underline;
+}
+
+.column-2 {
+    margin-top: 20vh;
+    flex: 1;
+}
+
+.column-2 p {
+    padding-left: 50px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    width: 68ch;
+}
+
+.form .row-1 {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 25px 35px 35px 50px;
+}
+
+.form .row-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form .row-1 > div {
+    display: flex;
+    gap: 50px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    text-transform: uppercase;
+    color: #292525;
+}
+
+.field input[type] {
+    border: 1px solid var(--border);
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    transition:
+        border-color 0.4s,
+        box-shadow 0.4s;
+
+    &:hover {
+        border-color: #18a9f7;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+    }
+    
+    &:user-invalid {
+        border-color: red;
+    }
+}
+
+.form .row-2 {
+    padding: 30px 0 0 50px;
+}
+
+.create-acct-btn {
+    padding: 10px 40px;
+    border: none;
+    background: var(--btn-bg);
+    color: #fff;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.form .row-2 p {
+    padding: 0;
+    font-weight: normal;
+}
+
+.form .row-2 a[class^="link-to"] {
+    color: var(--btn-bg);
+    font-weight: bold;
+}
